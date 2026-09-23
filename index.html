@@ -447,6 +447,16 @@
 
         // Initialize on Load
         window.addEventListener('DOMContentLoaded', initGame);
-    </script>
+    </script> 
+    // Jaise hi game load hoga, yeh loading screen ko hata dega
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            var loader = document.getElementById('loading-screen');
+            if (loader) {
+                loader.style.display = 'none';
+            }
+        }, 1500); // 1.5 second baad photo hat jayegi
+    });
+</script>
 </body>
 </html>
